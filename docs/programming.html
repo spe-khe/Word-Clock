@@ -88,49 +88,7 @@
       <p>Wie in dem Bild zu sehen ist, muss in der Suchleiste nach „Arduino Nano ESP32“ gesucht werden. Hierbei ist es wichtig darauf zu achten, dass das Board „Arduino Nano ESP32-esp32“ ausgewählt wird. Unter Ports wird einfach der angezeigte Port ausgewählt.</p>
       <p>Nun kann der Code über den Pfeil auf türkisem Hintergrund hochgeladen werden. </p>
       
-      <pre><code>/*
- *  So markierte Programmteile sind Kommentare, diese dienen nur der
- *  Erläuterung des Programms.
- */
 
-// Auch so markierte Zeilen sind Kommentare</code></pre>
-
-        <p>
-            Am Anfang des Programms werden Bibliotheken importiert, das sind Dateien mit komplexerem Code, die für die
-            einzelnen Bauteile zur Verfügung gestellt werden. So müssen wir nicht alle Funktionen selbst implementieren.
-        </p>
-        <pre><code>#include &ltMD_MAX72xx.h&gt	// LED-Matrix
-#include &ltArduino.h&gt	// Standard Arduino-Bibliothek
-...</code></pre>
-        <p>
-            Danach folgen einige Definitionen, hier werden bestimmte konstante Werte festgelegt, die dann im Programm
-            benutzt werden. So sind alle Werte, die vielleicht später noch verändert werden könnten (z.B. die Pins des
-            Mikrocontrollers, an die Sensoren etc. angeschlossen sind) an nur einer Stelle eingetragen.
-        </p>
-        <pre><code>#define BTN1_PIN D3
-#define BTN2_PIN D2</code></pre>
-        <p>
-            Nun werden noch Variablen angelegt, die im Programm benutzt und verändert werden. Im MultiMonG-Programm
-            können einige dieser Variablen nach Belieben verändert werden, z.B. Name und Passwort des ausgesendeten
-            WLAN-Netzwerkes.
-        </p>
-        <pre><code>char SSID[50] = "Siemens-MultiMonG";
-char PASSWORD[50] = "12345678";</code></pre>
-        <p>
-            Erst jetzt werden die Funktionen definiert, also der Teil des Programms, der das Verhalten des Gadgets
-            direkt steuert. Dies sind im Wesentlichen zwei Funktionen:
-        </p>
-        <pre><code>void setup() {
-    ...
-    Diese Funktion wird beim Start des Gadgets einmal ausgeführt
-    ...
-}
-
-void loop() {
-    ...
-    Diese Funktion wird danach immer wieder ausgeführt
-    ...
-}</code></pre>
         <div id="navigation">
             <a href="assembly.html">
                 <div id="navigation_left" class="nav_prev"><< Aufbau</div>
