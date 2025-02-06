@@ -21,26 +21,32 @@
     <section id="main_content" class="inner">
         <iframe src="table_of_contents.html"
                 onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
-        <p>Dieser Teil der Anleitung ist <a href="assembly_videos.html">hier</a> auch in Videoform verfügbar</p>
+        
         <h1 id="aufbau">Aufbau</h1>
         <p>Insgesamt besteht das Gadget aus den folgenden Bauteilen:</p>
         <ul>
-            <li>Platine</li>
-            <li>Holzbrett</li>
-            <li>Taster</li>
-            <li>Lautsprecher</li>
-            <li>Steckleiste</li>
-            <li>ESP8266</li>
-            <li>DHT11 (Sensor)</li>
-            <li>Verbinder</li>
-            <li>MQ135 (Luftqualitätssensor)</li>
-            <li>LED-Matrix</li>
+            <li>1x Platine</li>
+            <li>3-4x Sperrholzplatten</li>
+            <li>3x Taster</li>
+            <li>1x Fotowiderstand (Helligkeitssensor)</li>
+            <li>1x Arduino Nano ESP32</li>
+            <li>1x DHT11 Temperatur und Feuchtigkeitssensor </li>
+            <li>10x LED-Streifen mit 11 LEDs</li>
+            <li>1x LED-Streifen mit 4 LEDs</li>
+            <li>1x Widerstand 1kΩ</li>
+            <li>1x Widerstand 470Ω</li>
+            <li>1x Kondensator 1000µF und 6,3V</li>
         </ul>
 
         <div class="flex-container" style="margin: 0">
 
         </div>
-
+        <h2 id="Komponenten">Komponenten</h2>
+        <p>Die „Wordclock“ besteht aus mehreren baulichen Komponenten. Diese sind eine „Bodenplatte“, 
+            eine Zwischenplatte für die LEDs, eine Gitterplatte, um die einzelnen LEDs untereinander abzuschirmen, 
+            4 Seitenteile und einem „Deckel“ mit den ausgelaserten Buchstaben. 
+            Der Deckel besteht aus einer 3mm dicken MDF-Platte und einer 2mm dicken Acrylplatte.</p>
+        
         <p>Diese Bauteile müssen korrekt verdrahtet bzw. miteinander verbunden werden, damit die entsprechenden
             Funktionen gegeben sind. Diese Aufgabe übernimmt die Platine für uns. Auf ihr befinden sich Leiterbahnen,
             die die Verbindungen zwischen den Modulen und dem Mikrocontroller herstellen.
