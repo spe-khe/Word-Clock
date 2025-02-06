@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <title>Einführung</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+</head>
+<body>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
 
+        <h1 id="project_title">Word-Clock</h1>
+        <h2 id="project_tagline">Word-Clock Gadget der SPE Karlsruhe</h2>
+        <h3 id="project_tagline">Work in Progress</h3>
+    </header>
+</div>
+    
+
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+      <iframe src="table_of_contents.html"
+              onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+      <h1>Programmierung</h1>
+      <p>
+          Für die Programmierung des Gadgets wird die "Arduino IDE" benötigt. Diese kann
+          <a href="https://www.arduino.cc/en/software">hier</a> heruntergeladen werden und muss anschließend
+          installiert werden. 
+          Nun wird der Boardverwalter geöffnet (Werkzeuge>Board>Boardverwalter) und dort das Paket "esp32"
+          installiert.
+      </p>
+      <p>
+          Das Programm kann hier heruntergeladen werden: TODo
+          <br>
+          <a href="https://github.com/spe-khe/LED-Gadget/raw/master/MultiMonG.zip" class="dl_link">MultiMonG.zip</a>
+      </p>
+      <h2>Anpassung des WLAN</h2>
+      <p>
+          Da für den Code WLAN benötigt wird, müssen in den folgenden zwei Zeilen noch der passende WLAN-Router mit zugehörigem Passwort eingestellt werden. Zu Testzwecken kann auch der Hotspot vom Handy verwendet werden.
+      </p>
+      <p>
+          In der oberen Zeile muss für „WLAN-Name hier eingeben“ der Name des WLAN-Netzwerkes eingegeben werden. In der zweiten Zeile muss für “WLAN-Passwort hier eingeben“ das passende WLAN-Passwort eingetragen werden. Im Code findet man dies in den Zeilen 12 und 13.
+      </p>
+
+      <h2>Anpassung des Ortes für die Außentemperatur</h2>
+      <p>
+          Um die Außentemperatur aus dem Internet abrufen zu können, muss sich zunächst auf einer Website registriert werden. Diese ist unter folgendem Link zu finden: 
+        <br>
+          <a href="https://https://openweathermap.org/api" class="dl_link">Weather API - OpenWeatherMap</a>
+      </p>
+      <p>
+          Über „sign in“ oben rechts und anschließend über „create an account“ sollte sich folgende Seite geöffnet haben.
+      </p>
+
+      <p>
+          Hier muss nun ein Account erstellt werden. 
+      </p>
+      <p>
+         Nach dem Einloggen kann über den Username, der nun anstelle von Login in der oberen Zeile steht, „My API keys“ ausgewählt werden.
+      </p>
+      <p>Der API key muss nun in den Zeilen 22-24 im Code zwischen die “ “ eingefügt werden. </p>
+      <p>Unter „string city“ lässt sich die Stadt ändern, für die die Temperatur und Luftfeuchtigkeit angezeigt werden soll. Dafür muss einfach „Karlsruhe“ für die gewünschte Stadt ersetzt werden. Sollte eine Stadt außerhalb von Deutschland gewählt werden, muss in der Zeile darunter für „DE“ das passende Land in Kurzschreibweise ersetzt werden.</p>
+       
+      <h2>Libraries</h2>
+      <p>Nun müssen noch einige Libraries installiert werden. Dafür muss in der linken Seitenleiste das Büchersymbol ausgewählt werden. Es sollte sich nun der Library Manager öffnen. Insgesamt müssen fünf Libraries installiert werden. </p>
+      
+      <p>Wie in dem Bild zu sehen ist, muss einmal in der Suchleiste nach FastLED gesucht werden und die vorgeschlagene Library anschließend installiert werden.</p>
+      
+      <p>Die zweite Library, die benötigt wird, kann unter Esp32time gefunden werden.</p>
+      
+      <p>Die dritte Library, die benötigt wird, kann unter ESP-DASH gefunden werden.</p>
+
+      <p>Die vorletzte Library die benötigt wird, kann unter Arduino JSON gefunden werden.</p>
+      
+      <p>Die Letze Bibliothek für den DHT11 Sensor (Temperatur und Luftfeuchtigkeit)</p>
+      
+      
+      <h2>Code hochladen</h2>
+      <p>Ist dies erledigt muss nun der Code auf den Arduino hochgeladen werden. Hierfür muss zunächst der Arduino über den USB-C-Anschluss mit dem Laptop verbunden werden. Anschließend muss nun der richtige Port und das richtige Board eingestellt werden. In der Arduino Software kann dies in der oberen Leiste unter „select Board“ und anschließend unter „Select other board und port“ eingestellt werden.</p>
+      <p>Es sollte sich nun folgendes Fenster geöffnet haben:</p>
+      <p>Wie in dem Bild zu sehen ist, muss in der Suchleiste nach „Arduino Nano ESP32“ gesucht werden. Hierbei ist es wichtig darauf zu achten, dass das Board „Arduino Nano ESP32-esp32“ ausgewählt wird. Unter Ports wird einfach der angezeigte Port ausgewählt.</p>
+      <p>Nun kann der Code über den Pfeil auf türkisem Hintergrund hochgeladen werden. </p>
+      
+      <pre><code>/*
+ *  So markierte Programmteile sind Kommentare, diese dienen nur der
+ *  Erläuterung des Programms.
+ */
+
+// Auch so markierte Zeilen sind Kommentare</code></pre>
+
+        <p>
+            Am Anfang des Programms werden Bibliotheken importiert, das sind Dateien mit komplexerem Code, die für die
+            einzelnen Bauteile zur Verfügung gestellt werden. So müssen wir nicht alle Funktionen selbst implementieren.
+        </p>
+        <pre><code>#include &ltMD_MAX72xx.h&gt	// LED-Matrix
+#include &ltArduino.h&gt	// Standard Arduino-Bibliothek
+...</code></pre>
+        <p>
+            Danach folgen einige Definitionen, hier werden bestimmte konstante Werte festgelegt, die dann im Programm
+            benutzt werden. So sind alle Werte, die vielleicht später noch verändert werden könnten (z.B. die Pins des
+            Mikrocontrollers, an die Sensoren etc. angeschlossen sind) an nur einer Stelle eingetragen.
+        </p>
+        <pre><code>#define BTN1_PIN D3
+#define BTN2_PIN D2</code></pre>
+        <p>
+            Nun werden noch Variablen angelegt, die im Programm benutzt und verändert werden. Im MultiMonG-Programm
+            können einige dieser Variablen nach Belieben verändert werden, z.B. Name und Passwort des ausgesendeten
+            WLAN-Netzwerkes.
+        </p>
+        <pre><code>char SSID[50] = "Siemens-MultiMonG";
+char PASSWORD[50] = "12345678";</code></pre>
+        <p>
+            Erst jetzt werden die Funktionen definiert, also der Teil des Programms, der das Verhalten des Gadgets
+            direkt steuert. Dies sind im Wesentlichen zwei Funktionen:
+        </p>
+        <pre><code>void setup() {
+    ...
+    Diese Funktion wird beim Start des Gadgets einmal ausgeführt
+    ...
+}
+
+void loop() {
+    ...
+    Diese Funktion wird danach immer wieder ausgeführt
+    ...
+}</code></pre>
+        <div id="navigation">
+            <a href="assembly.html">
+                <div id="navigation_left" class="nav_prev"><< Aufbau</div>
+            </a>
+            <a href="manual.html">
+                <div id="navigation_right" class="nav_next">Bedienung des MultiMonG >></div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+
+        <p class="copyright">LED-Gadget maintained by <a href="https://github.com/spe-khe">spe-khe</a></p>
+
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+    </footer>
+</div>
+</body>
+</html>
