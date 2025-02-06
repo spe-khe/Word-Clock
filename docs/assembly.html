@@ -16,3 +16,56 @@
         <h3 id="project_tagline">Work in Progress</h3>
     </header>
 </div>
+    
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        <iframe src="table_of_contents.html"
+                onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+        <p>Dieser Teil der Anleitung ist <a href="assembly_videos.html">hier</a> auch in Videoform verfügbar</p>
+        <h1 id="aufbau">Aufbau</h1>
+        <p>Insgesamt besteht das Gadget aus den folgenden Bauteilen:</p>
+        <ul>
+            <li>Platine</li>
+            <li>Holzbrett</li>
+            <li>Taster</li>
+            <li>Lautsprecher</li>
+            <li>Steckleiste</li>
+            <li>ESP8266</li>
+            <li>DHT11 (Sensor)</li>
+            <li>Verbinder</li>
+            <li>MQ135 (Luftqualitätssensor)</li>
+            <li>LED-Matrix</li>
+        </ul>
+
+        <div class="flex-container" style="margin: 0">
+
+        </div>
+
+        <p>Diese Bauteile müssen korrekt verdrahtet bzw. miteinander verbunden werden, damit die entsprechenden
+            Funktionen gegeben sind. Diese Aufgabe übernimmt die Platine für uns. Auf ihr befinden sich Leiterbahnen,
+            die die Verbindungen zwischen den Modulen und dem Mikrocontroller herstellen.
+            In der folgenden Abbildung ist der Schaltplan des Gadgets zu sehen, also die Verbindungen zwischen den
+            Bauteilen, die auf der Platine umgesetzt sind.</p>
+
+
+        <p style="color: red; font-style: italic;">Achtung: Es ist wichtig, dass alle Bauteile auf der richtigen
+            Seite der Platine verlötet werden. Auf der Platine ist jeweils an der entsprechenden Stelle der Umriss
+            des Bauteils aufgedruckt.</p>
+
+    
+        <div id="navigation">
+            <a href="index.html">
+                <div id="navigation_left" class="nav_prev"><< Einführung</div>
+            </a>
+            <a href="programming.html">
+                <div id="navigation_right" class="nav_next">Programmierung >></div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+
+        <p class="copyright">LED-Gadget maintained by <a href="https://github.com/spe-khe">spe-khe</a></p>
