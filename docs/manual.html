@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <title>Einführung</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+</head>
+<body>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
 
+        <h1 id="project_title">Word-Clock</h1>
+        <h2 id="project_tagline">Word-Clock Gadget der SPE Karlsruhe</h2>
+        <h3 id="project_tagline">Work in Progress</h3>
+    </header>
+</div>
+
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        <iframe src="table_of_contents.html"
+                onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+        <h1>Bedienung der Word-Clock</h1>
+        <p>Sobald die Wordclock an eine Stromquelle (Laptop oder 15w Netzteil) angeschlossen wird, laufen die LEDs reihe für reihe durch. Sobald der Arduino mit dem Netzwerk verbunden ist, leuchtet eine einzelne LED auf und kurz danach wird auch schon die Uhrzeit angezeigt. Drückt man den Taster für die Farbänderung, wechselt die Farbe der LEDs direkt zur nächsten Farbe. Wird der Taster für die Temperatur gedrückt, zeigt es zuerst die Temperatur und Luftfeuchtigkeit des Sensors, also die aktuelle Raumtemperatur, und danach die Temperatur und die Luftfeuchtigkeit des ausgewählten Ortes an. Wenn der Taster für die Helligkeit gedrückt wird, ändert sich die Helligkeit der LEDs.</p>
+    
+        <div id="navigation">
+            <a href="programming.html">
+                <div id="navigation_left" class="nav_prev"><< Programmierung</div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+
+        <p class="copyright">LED-Gadget maintained by <a href="https://github.com/spe-khe">spe-khe</a></p>
+
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+    </footer>
+</div>
+</body>
+</html>
