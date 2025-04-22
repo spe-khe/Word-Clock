@@ -54,6 +54,34 @@
         <div class="flex-container" style="margin: 0">
 
         </div>
+        <h2 id="Gehäuse">Komponenten</h2>
+        <p>Die Komponenten für das Gehäuse müssen zunächst im Lasercutter ausgeschnitten werden. 
+            Eine Anleitung zur Bedienung des Lasercutters ist auf dem SPE Sharepoint hinterlegt: Innovationswerkstatt Lasercutter Guide. 
+            Die Dateien, welche Ausgeschnitten werden können heruntergeladen werden: //Link
+            Die Frontplatte wird einmal aus einer 3mm MDF-Platte ausgeschnitten und zusätzlich aus einer Gravieracryl Platte. 
+            Die restlichen Teile werden mit 5mm Sperrholz ausgeschnitten. 
+            In VisiCut muss das richtige Material als auch die richtige Materialstärke ausgewählt werden, 
+            um ein gutes Schnittbild zu garantieren. Alle Dateien außer die Seitenteile und 
+            die Zwischenplatte werden ausschließlich geschnitten und können somit im Modus „alles Cut“ 
+            unter dem Reiter „Mapping“ geschnitten werden.</p>
+
+        <p>Das zweite Seitenteil und die Zwischenplatte werden im Modus
+            „Nach einzelner Eigenschaft“ – „unterschieden nach Strichfarbe“ geschnitten. 
+            Bei „Rot“ muss das Profil „Cut“ und bei „Alles andere“, „engrave“ angewählt werden.</p>
+
+        </div>
+        <h2 id="Platine">Komponenten</h2>
+        <p>Der Arduino muss nun korrekt verdrahtet werden. Dabei ist zu beachten, dass nicht direkt an die PINs 
+            des Arduino gelötet werden darf. Es werden daher, wie im folgenden Bild zu sehen, Steckverbinder verwendet. 
+            Diese können mit einem Seitenschneider auf die richtige Länge gekürzt werden.</p>
+        <p>Der Arduino und die restlichen Bauteile werden auf die Platine gelötet. Hierfür kann sich an folgendem Bild orientiert werden. 
+            Wichtig ist, die Bauteile an die korrekte Position zu löten.</p>
+        <p font-style: italic;">Tipp: Die Bauteile sollten nacheinander einzeln verlötet werden. Die Pins der Bauteile sollten 
+            nach dem Aufstecken auf die Platine gekürzt werden.</p>
+        <p>Als erstes sollten die Steckverbinder des ESP32 verlötet werden. Pro Steckverbinder gibt es 15 Lötstellen.</p>
+        <p>Der Kondensator (zylindrisches Bauteil) wird links des ESP32 platziert. Hierbei muss unbedingt darauf geachtet werden, dass der „Minus Pin“ am Kondensator (der kürzere Pin am Bauteil) mit dem GND PIN der Platine verbunden ist (Ground Pins der Platine erkennt man an der „X Form“ des Durchgangslochs auf der Rückseite der Platine).</p>
+    
+        </div>
         <h2 id="Komponenten">Komponenten</h2>
         <p>Die „Wordclock“ besteht aus mehreren baulichen Komponenten. Diese sind eine „Bodenplatte“, 
             eine Zwischenplatte für die LEDs, eine Gitterplatte, um die einzelnen LEDs untereinander abzuschirmen, 
@@ -65,6 +93,13 @@
             die die Verbindungen zwischen den Modulen und dem Mikrocontroller herstellen.
             In der folgenden Abbildung ist der Schaltplan des Gadgets zu sehen, also die Verbindungen zwischen den
             Bauteilen, die auf der Platine umgesetzt sind.</p>
+
+        <p>Die Zwischenplatte wird nun mit der Nut in die Schlitze der zwei Seitenteile gesteckt. 
+            Es muss darauf geachtet werden, dass die Aussparung für das USB-C Kabel unten liegt. 
+            Nun können alle 8 Verbindungsdreiecke mit etwas Kraft auf die Enden der Seitenteile aufgesteckt werden. 
+            Im letzten Schritt werden die Seitenteile für Ober- und Unterseite des Gehäuses auf die Verbindungsdreiecke aufgesteckt. 
+            Es ist darauf zu achten, dass das Seitenteil mit den 3 Löchern das Oberteil ist.</p>
+    
                
                 
         <p style="color: red; font-style: italic;">Achtung: Es ist wichtig, dass alle Bauteile auf der richtigen
