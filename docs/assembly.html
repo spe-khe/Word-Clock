@@ -65,9 +65,13 @@
             die Zwischenplatte werden ausschließlich geschnitten und können somit im Modus „alles Cut“ 
             unter dem Reiter „Mapping“ geschnitten werden.</p>
 
+        <img src="assets/images/assembly/only_cut (4).png" alt="nur cut">
+
         <p>Das zweite Seitenteil und die Zwischenplatte werden im Modus
             „Nach einzelner Eigenschaft“ – „unterschieden nach Strichfarbe“ geschnitten. 
             Bei „Rot“ muss das Profil „Cut“ und bei „Alles andere“, „engrave“ angewählt werden.</p>
+
+        <img src="assets/images/assembly/Cut_Engrave (3).png" alt="cut and engrave">
         
         <p>Die Zwischenplatte wird nun mit der Nut in die Schlitze der zwei Seitenteile gesteckt. 
             Es muss darauf geachtet werden, dass die Aussparung für das USB-C Kabel unten liegt. 
@@ -81,6 +85,11 @@
             Diese können mit einem Seitenschneider auf die richtige Länge gekürzt werden.</p>
         <p>Der Arduino und die restlichen Bauteile werden auf die Platine gelötet. Hierfür kann sich an folgendem Bild orientiert werden. 
             Wichtig ist, die Bauteile an die korrekte Position zu löten.</p>
+
+        <img src="assets/images/assembly/Platine_front.JPEG" alt="Platine Vorderseite">
+
+        <img src="assets/images/assembly/Platine_back.JPEG" alt="Platine Rückseite">
+        
         <p style="color: black; font-style: italic;">Tipp: Die Bauteile sollten nacheinander einzeln verlötet werden. Die Pins der Bauteile sollten 
             nach dem Aufstecken auf die Platine gekürzt werden.</p>
         <p>Als erstes sollten die Steckverbinder des ESP32 verlötet werden. Pro Steckverbinder gibt es 15 Lötstellen.</p>
@@ -95,19 +104,31 @@
         <h2 id="LED-Matrix">LED-Matrix</h2>
                 
         <p>Zunächst müssen die LED-Streifen auf die Zwischenplatte geklebt werden. Auf dieser sind bereits Markierungen mit dem Lasercutter eingraviert, um dies zu erleichtern. Dabei muss man auf die Pfeilrichtung auf den Streifen achten, sodass die Pfeile in Richtung des Stromverlaufs zeigen. Die Pfeile der obersten Reihe müssen von links nach rechts verlaufen. Die Pfeile der zweiten Reihe müssen dementsprechend von rechts nach links zeigen. Die Richtung der Pfeile wechselt sich also in jeder Reihe ab.</p>
+        <img src="assets/images/assembly/Matrix.jpg" alt="Matrix">
         <p>Zuerst müssen die Kontakte der LEDs verzinnt werden. Wenn alle Kontakte vorbereitet sind, müssen die Leitungen vorbereitet werden. </p>
                 
         <p style="color: black; font-style: italic;">TIPP: Legen Sie die ersten Leitungen erstmal in schönen Bögen an die Kontakte. Wenn eine passende Länge gefunden wurde, können die Leitungen für die restlichen LEDs vorgerichtet werden. Wenn die jeweiligen Leitungen für den „inneren“, „mittleren“ und „äußeren“ Bogen gleich lang sind, sieht es besser aus und spart Zeit. </p>
         <p>Im nächsten Schritt müssen die Leitungen auf ca. 3-4mm abisoliert und ebenfalls verzinnt werden, dadurch wird das Anlöten an den Kontakten erleichtert. Anschließend können die Kontakte verlötet werden. Dabei sollte darauf geachtet werden, dass die Kontakte an den Schnittstellen passend zu der nächsten Schnittstelle gelötet werden (+5V auf +5V; DO auf DiN; GND auf GND). Hierbei kann sich an folgendem Bild orientiert werden. </p>
                 
+        <img src="assets/images/assembly/Matrix_solder.jpg" alt="Matrix Lötstellen">
         
         <p>Wenn die LEDs gelötet sind, müssen noch 3 Leitungen an den Anfang der LED-Streifen gelötet werden und durch das Loch in der Zwischenplatte geführt werden. Das Ende dieser Leitungen wird abisoliert und mit Aderenthülsen versehen.</p>
 
+        <img src="assets/images/assembly/Last_Step_Matrix.jpg" alt="Letzter Schritt der Matrix">
+        
         <h2 id="Taster">Taster</h2>
 
         <p>Um die Taster mit der Platine zu verbinden, benötigen wir zwei Leitungen pro Taster, die auf eine passende Länge zugeschnitten werden. Danach kann jeweils eine Seite der Leitung auf 3-4mm abisoliert werden. </p>
+
+        <img src="assets/images/assembly/button_isolation.JPEG" alt="Taster abisolieren">
+        
         <p>Die Pins der Taster und die Enden der Leitungen werden nun mithilfe eines Lötkolbens verzinnt. Dann können die Pins auch schon mit den Enden der Leitungen verbunden werden.</p>
+
+        <img src="assets/images/assembly/button_solder.JPEG" alt="Taster löten">
+        
         <p>Das andere Ende der Leitungen wird ebenfalls abisoliert und mit passenden Aderenthülsen versehen.</p>
+
+        <img src="assets/images/assembly/button_attachement.JPEG" alt="Taster Aderenthülsen">
         
         <div id="navigation">
             <a href="index.html">
