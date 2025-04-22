@@ -75,7 +75,7 @@
             Im letzten Schritt werden die Seitenteile für Ober- und Unterseite des Gehäuses auf die Verbindungsdreiecke aufgesteckt. 
             Es ist darauf zu achten, dass das Seitenteil mit den 3 Löchern das Oberteil ist.</p>
 
-        <h2 id="Platine">Gehäuse</h2>
+        <h2 id="Platine">Platine</h2>
         <p>Der Arduino muss nun korrekt verdrahtet werden. Dabei ist zu beachten, dass nicht direkt an die PINs 
             des Arduino gelötet werden darf. Es werden daher, wie im folgenden Bild zu sehen, Steckverbinder verwendet. 
             Diese können mit einem Seitenschneider auf die richtige Länge gekürzt werden.</p>
@@ -85,39 +85,29 @@
             nach dem Aufstecken auf die Platine gekürzt werden.</p>
         <p>Als erstes sollten die Steckverbinder des ESP32 verlötet werden. Pro Steckverbinder gibt es 15 Lötstellen.</p>
         <p>Der Kondensator (zylindrisches Bauteil) wird links des ESP32 platziert. Hierbei muss unbedingt darauf geachtet werden, dass der „Minus Pin“ am Kondensator (der kürzere Pin am Bauteil) mit dem GND PIN der Platine verbunden ist (Ground Pins der Platine erkennt man an der „X Form“ des Durchgangslochs auf der Rückseite der Platine).</p>
-
-        <h2 id="Heäuse">Gehäuse</h2>
-
-        <p>Die Komponenten für das Gehäuse müssen zunächst im Lasercutter ausgeschnitten werden. Die Frontplatte wird einmal aus einer 3mm MDF Platte ausgeschnitten und zusätzlich aus einer Gravieracryl Platte. Die restlichen Teile werden mit 5mm Sperrholz ausgeschnitten. Die Bauteile werden im Anschluss zu In VisiCut muss das richtige Material als auch die richtige Materialstärke ausgewählt werden, um ein gutes Schnittbild zu garantieren.
-                Alle Dateien außer die Seitenteile werden ausschließlich geschnitten und können somit im Modus „alles Cut“ unter dem Reiter „Mapping“ geschnitten werden. Das zweite Seitenteil wird im Modus „Nach einzelner Eigenschaft“ – „unterschieden nach Strichfarbe“ geschnitten. Bei „Rot“ muss das Profil „Cut“ und bei „Alles andere“, „engrave“ angewählt werden.</p>
-            
-        <h2 id="Komponenten">LED-Streifen löten</h2>
+        <p>Die Widerstände können einfach, wie im Bild zu sehen verlötet werden. Hierbei muss jedoch der 470 Ohm Widerstand ganz außen sitzen. Der 1kOhm Widerstand wird rechts daneben aufgesteckt und verlötet.</p>
+        <p>Der DHT11 Sensor (Bauteil mit „blauem Kasten“) wird auf der oberen Seite angebracht. Der DHT 11 Sensor muss „von der Platine weg zeigen“ und kann dann verlötet werden. </p>
+        <p>Der Fotowiderstand (Helligkeitssensor) wird direkt daneben gelötet, die Polung spielt keine Rolle. Wichtig ist, dass der Sensor ebenfalls „nach oben zeigt“. </p>
+        <p>Als letztes müssen die 3 zweipoligen Schraubklemmen können durch aufeinander schieben verbunden werden. Sie werden wie im Bild zu sehen auf der rechten Seite verlötet. Die dreipolige Schraubklemme wird entsprechend auf der linken Seite verlötet. Die Anschlüsse für die Leitungen müssen bei allen Schraubklemmen nach außen zeigen. </p>
+        <p style="color: black; font-style: italic;">Achtung: Es ist wichtig, dass alle Bauteile auf der richtigen Seite der Platine verlötet werden. Auf der Platine ist jeweils an der entsprechenden Stelle der Umriss des Bauteils aufgedruckt.</p>
+        
+        
+        <h2 id="Komponenten">LED-Matrix</h2>
                 
-        <p>Zunächst müssen die LED-Streifen auf die Zwischenplatte (Dateiname: LED_Halterung) geklebt werden. Auf dieser sind bereits Markierungen mit dem Lasercutter eingraviert, um dies zu erleichtern. Dabei muss man auf die Pfeilrichtung auf den Streifen achten, sodass die Pfeile in Richtung des Stromverlaufs zeigen. Die Pfeile der obersten Reihe müssen von links nach rechts verlaufen. Die Pfeile der zweiten Reihe müssen dementsprechend von rechts nach links zeigen. Die Richtung der Pfeile wechselt sich also in jeder Reihe ab.
-                Zuerst müssen die Kontakte der LEDs verzinnt werden. Wenn alle Kontakte vorbereitet sind, müssen die Leitungen vorbereitet werden. </p>
+        <p>Zunächst müssen die LED-Streifen auf die Zwischenplatte (Dateiname: LED_Halterung) geklebt werden. Auf dieser sind bereits Markierungen mit dem Lasercutter eingraviert, um dies zu erleichtern. Dabei muss man auf die Pfeilrichtung auf den Streifen achten, sodass die Pfeile in Richtung des Stromverlaufs zeigen. Die Pfeile der obersten Reihe müssen von links nach rechts verlaufen. Die Pfeile der zweiten Reihe müssen dementsprechend von rechts nach links zeigen. Die Richtung der Pfeile wechselt sich also in jeder Reihe ab.</p>
+        <p>Zuerst müssen die Kontakte der LEDs verzinnt werden. Wenn alle Kontakte vorbereitet sind, müssen die Leitungen vorbereitet werden. </p>
                 
-        <p>TIPP: Legen Sie die ersten Leitungen erstmal in schönen Bögen an die Kontakte. Wenn eine passende Länge gefunden wurde, können die Leitungen für die restlichen LEDs vorgerichtet werden. Wenn die jeweiligen Leitungen für den „inneren“, „mittleren“ und „äußeren“ Bogen gleich lang sind, sieht es besser aus und spart Zeit. </p>
+        <p style="color: black; font-style: italic;">TIPP: Legen Sie die ersten Leitungen erstmal in schönen Bögen an die Kontakte. Wenn eine passende Länge gefunden wurde, können die Leitungen für die restlichen LEDs vorgerichtet werden. Wenn die jeweiligen Leitungen für den „inneren“, „mittleren“ und „äußeren“ Bogen gleich lang sind, sieht es besser aus und spart Zeit. </p>
         <p>Im nächsten Schritt müssen die Leitungen auf ca. 3-4mm abisoliert und ebenfalls verzinnt werden, dadurch wird das Anlöten an den Kontakten erleichtert. Anschließend können die Kontakte verlötet werden. Dabei sollte darauf geachtet werden, dass die Kontakte an den Schnittstellen passend zu der nächsten Schnittstelle gelötet werden (+5V auf +5V; DO auf DiN; GND auf GND). Hierbei kann sich an folgendem Bild orientiert werden. </p>
                 
         
-        <p>Wenn die LEDs gelötet sind, müssen noch 3 Leitungen an den Anfang der LED-Streifen
-                gelötet werden und durch das Loch in der Zwischenplatte geführt werden.</p>
+        <p>Wenn die LEDs gelötet sind, müssen noch 3 Leitungen an den Anfang der LED-Streifen gelötet werden und durch das Loch in der Zwischenplatte geführt werden. Das Ende dieser Leitungen wird abisoliert und mit Aderenthülsen versehen.</p>
 
-        <h2 id="Platine">Platine</h2>
+        <h2 id="Taster">Taster</h2>
 
-        <p>Der Arduino muss nun korrekt verdrahtet werden. Dabei ist zu beachten, dass nicht direkt an die PINs des Arduino gelötet werden darf. Es werden daher, wie im folgenden Bild zu sehen, Steckverbinder verwendet. Diese können mit einem Seitenschneider auf die richtige Länge gekürzt werden. </p>
-        <p>Der Arduino und die restlichen Bauteile werden auf eine Lochrasterplatine gelötet. Hierfür kann sich am folgenden Schaltplan auf Seite 8 orientiert werden. Die grauen Punkte symbolisieren hierbei die Löcher in der Lochrasterplatte. </p>
-        <p>Der Kondensator wird zwischen den PINs GND und VBUS gelötet. Hierbei muss unbedingt darauf geachtet werden, dass der „Minus Pin“ am Kondensator an den GND PIN von Arduino kommt. Die Widerstände können einfach nach Schaltplan verlötet werden.
-            Die 3 Taster haben jeweils 2 Anschlüsse. Einer der Anschlüsse (erstmal egal welcher) muss auf den GND-Anschluss vom Arduino gebracht werden. Der Zweite muss dann auf den richtigen Pin gelegt werden. In dem Fall auf Pin D3, D4 und D5. 
-            Der DHT11 Sensor hat 3 PINs: VCC, GND und DATA. Der VCC PIN ist die Spannungsversorgung. Dieser muss am Arduino an Anschluss VBUS. GND kommt ebenfalls an den GND-Anschluss am Arduino und der DATA PIN muss an den PIN D8 angeschlossen werden.
-            Der Fotowiderstand (Helligkeitssensor) wird von PIN A0 auf VBUS gelötet. Die Beine des Helligkeitssensor sollten mit Schrumpfschläuchen überzogen werden.  
-            Als letztes müssen drei Leitungen für die LEDs angelötet werden. 
-            Hierbei gibt es wieder einen GND, einen 5V+ und einen DiN Kontakt. 
-            Die GND-Leitung kommt an den GND-PIN am Arduino, die 5V+ Leitung an den VBUS und die DiN-Leitung an das freie Ende des 470Ω Widerstands.
-            Die Leitungen für die LEDs von der Platine und die Leitungen von den LEDs selbst, können jetzt über die WAGO-Klemmen verbunden werden. Durch die WAGO-Klemmen ist es möglich, die LEDs noch von dem Arduino im Nachhinein zu trennen, falls z.B. eine LED defekt sein sollte.
-            Zum Schluss noch alle GND PINs miteinander und alle VBUS PINs miteinander verbinden. 
-            </p>
-       <p style="color: red; font-style: italic;">Achtung: NICHT GND mit VBUS verbinden!</p>
+        <p>Um die Taster mit der Platine zu verbinden, benötigen wir zwei Leitungen pro Taster, die auf eine passende Länge zugeschnitten werden. Danach kann jeweils eine Seite der Leitung auf 3-4mm abisoliert werden. </p>
+        <p>Die Pins der Taster und die Enden der Leitungen werden nun mithilfe eines Lötkolbens verzinnt. Dann können die Pins auch schon mit den Enden der Leitungen verbunden werden.</p>
+        <p>Das andere Ende der Leitungen wird ebenfalls abisoliert und mit passenden Aderenthülsen versehen.</p>
         
         <div id="navigation">
             <a href="index.html">
