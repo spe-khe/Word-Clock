@@ -69,21 +69,12 @@
       <p>Unter „string city“ lässt sich die Stadt ändern, für die die Temperatur und Luftfeuchtigkeit angezeigt werden soll. Dafür muss einfach „Karlsruhe“ für die gewünschte Stadt ersetzt werden. Sollte eine Stadt außerhalb von Deutschland gewählt werden, muss in der Zeile darunter für „DE“ das passende Land in Kurzschreibweise ersetzt werden.</p>
        
       <h2>Libraries</h2>
-      <p>Nun müssen noch einige Libraries installiert werden. Dafür muss in der linken Seitenleiste das Büchersymbol ausgewählt werden. Es sollte sich nun der Library Manager öffnen. Insgesamt müssen fünf Libraries installiert werden. </p>
-      
-      <p>Wie in dem Bild zu sehen ist, muss einmal in der Suchleiste nach FastLED gesucht werden und die vorgeschlagene Library anschließend installiert werden.</p>
-      
-      <p>Die zweite Library, die benötigt wird, kann unter Esp32time gefunden werden.</p>
-      
-      <p>Die dritte Library, die benötigt wird, kann unter ESP-DASH gefunden werden.</p>
-
-      <p>Die vorletzte Library die benötigt wird, kann unter Arduino JSON gefunden werden.</p>
-      
-      <p>Die Letze Bibliothek für den DHT11 Sensor (Temperatur und Luftfeuchtigkeit)</p>
+      <p>Nun müssen noch einige Libraries installiert werden. Dafür muss in der linken Seitenleiste das Büchersymbol ausgewählt werden. Es sollte sich nun der Library Manager öffnen. Insgesamt müssen fünf Libraries installiert werden. Achten Sie darauf, dass Sie die Version laden, welche auf den Bildern zu erkennen ist</p>
       
       
       <h2>Code hochladen</h2>
-      <p>Ist dies erledigt muss nun der Code auf den Arduino hochgeladen werden. Hierfür muss zunächst der Arduino über den USB-C-Anschluss mit dem Laptop verbunden werden. Anschließend muss nun der richtige Port und das richtige Board eingestellt werden. In der Arduino Software kann dies in der oberen Leiste unter „select Board“ und anschließend unter „Select other board und port“ eingestellt werden.</p>
+        <p>Ist dies erledigt muss nun der Code auf den Arduino hochgeladen werden. Hierfür muss zunächst die korrekte ESp32 Core installiert werden. Über Werkzeuge > Board > Boardverwalter kann nun in der Suchleiste „esp32“ eingetragen werden. Bei „esp32 by Espressif Systemsder“ muss die Version 2.0.14 ausgewählt und installiert werden.</p>
+        <p>Nun kann der Arduino über den USB-C-Anschluss mit dem Laptop verbunden werden. Anschließend muss nun der richtige Port und das richtige Board eingestellt werden. In der Arduino Software kann dies in der oberen Leiste unter „select Board“ und anschließend unter „Select other board und port“ eingestellt werden.</p>
       <p>Es sollte sich nun folgendes Fenster geöffnet haben:</p>
       <p>Wie in dem Bild zu sehen ist, muss in der Suchleiste nach „Arduino Nano ESP32“ gesucht werden. Hierbei ist es wichtig darauf zu achten, dass das Board „Arduino Nano ESP32-esp32“ ausgewählt wird. Unter Ports wird einfach der angezeigte Port ausgewählt.</p>
       <p>Nun kann der Code über den Pfeil auf türkisem Hintergrund hochgeladen werden. </p>
