@@ -43,6 +43,8 @@
           In der oberen Zeile muss für „WLAN-Name hier eingeben“ der Name des WLAN-Netzwerkes eingegeben werden. In der zweiten Zeile muss für “WLAN-Passwort hier eingeben“ das passende WLAN-Passwort eingetragen werden. Im Code findet man dies in den Zeilen 12 und 13.
       </p>
 
+        <img src="assets/images/programming/update_Wifi.PNG" alt="Update Wifi">
+
       <h2>Anpassung des Ortes für die Außentemperatur</h2>
       <p>
           Um die Außentemperatur aus dem Internet abrufen zu können, muss sich zunächst auf einer Website registriert werden. Diese ist unter folgendem Link zu finden: 
@@ -53,6 +55,8 @@
           Über „sign in“ oben rechts und anschließend über „create an account“ sollte sich folgende Seite geöffnet haben.
       </p>
 
+        <img src="assets/images/programming/weatherapp.PNG" alt="Weatherapp">
+
       <p>
           Hier muss nun ein Account erstellt werden. 
       </p>
@@ -60,22 +64,29 @@
          Nach dem Einloggen kann über den Username, der nun anstelle von Login in der oberen Zeile steht, „My API keys“ ausgewählt werden.
       </p>
       <p>Der API key muss nun in den Zeilen 22-24 im Code zwischen die “ “ eingefügt werden. </p>
-      <pre><code>
-          string openWeatherMapApiKey = ""; //ApiKey aus der Webseite einfügen
-          string city = "Karlsruhe"; //Standort eingeben
-          string country Code = "DE"; //Land in Kurzschreibweise
-          string jsonBuffer;
-      </code></pre>
+
+        <img src="assets/images/programming/update_Information.png" alt="Update Informationen">
+        
       <p>Unter „string city“ lässt sich die Stadt ändern, für die die Temperatur und Luftfeuchtigkeit angezeigt werden soll. Dafür muss einfach „Karlsruhe“ für die gewünschte Stadt ersetzt werden. Sollte eine Stadt außerhalb von Deutschland gewählt werden, muss in der Zeile darunter für „DE“ das passende Land in Kurzschreibweise ersetzt werden.</p>
        
       <h2>Libraries</h2>
       <p>Nun müssen noch einige Libraries installiert werden. Dafür muss in der linken Seitenleiste das Büchersymbol ausgewählt werden. Es sollte sich nun der Library Manager öffnen. Insgesamt müssen fünf Libraries installiert werden. Achten Sie darauf, dass Sie die Version laden, welche auf den Bildern zu erkennen ist</p>
-      
-      
+        
+        <img src="assets/images/programming/Lib_one.png" alt="Bibliothek 1">
+        <img src="assets/images/programming/Lib_two.png" alt="Bibliothek 2">
+        <img src="assets/images/programming/Lib_three.png" alt="Bibliothek 3">
+        <img src="assets/images/programming/Lib_four.png" alt="Bibliothek 4">
+        <img src="assets/images/programming/Lib_five.png" alt="Bibliothek 5">
+        
       <h2>Code hochladen</h2>
         <p>Ist dies erledigt muss nun der Code auf den Arduino hochgeladen werden. Hierfür muss zunächst die korrekte ESp32 Core installiert werden. Über Werkzeuge > Board > Boardverwalter kann nun in der Suchleiste „esp32“ eingetragen werden. Bei „esp32 by Espressif Systemsder“ muss die Version 2.0.14 ausgewählt und installiert werden.</p>
+        
+        <img src="assets/images/programming/Boardverwalter.PNG" alt="Boardverwalter">
+        
         <p>Nun kann der Arduino über den USB-C-Anschluss mit dem Laptop verbunden werden. Anschließend muss nun der richtige Port und das richtige Board eingestellt werden. In der Arduino Software kann dies in der oberen Leiste unter „select Board“ und anschließend unter „Select other board und port“ eingestellt werden.</p>
-      <p>Es sollte sich nun folgendes Fenster geöffnet haben:</p>
+
+        <img src="assets/images/programming/select_board.png" alt="Boardauswahl">
+        
       <p>Wie in dem Bild zu sehen ist, muss in der Suchleiste nach „Arduino Nano ESP32“ gesucht werden. Hierbei ist es wichtig darauf zu achten, dass das Board „Arduino Nano ESP32-esp32“ ausgewählt wird. Unter Ports wird einfach der angezeigte Port ausgewählt.</p>
       <p>Nun kann der Code über den Pfeil auf türkisem Hintergrund hochgeladen werden. </p>
       
