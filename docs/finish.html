@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <title>Einführung</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+</head>
+<body>
+<!-- HEADER -->
+<div id="header_wrap" class="outer">
+    <header class="inner">
+
+        <h1 id="project_title">Word-Clock</h1>
+        <h2 id="project_tagline">Word-Clock Gadget der SPE Karlsruhe</h2>
+        <h3 id="project_tagline">Work in Progress</h3>
+    </header>
+</div>
+
+<div id="main_content_wrap" class="outer">
+    <section id="main_content" class="inner">
+        <iframe src="table_of_contents.html"
+                onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+        <h1>Finalisierung</h1>
+        <p>Die Platine wird nun auf der Rückseite der Zwischenplatte mit den 4 kurzen M4 Schrauben, 4 Unterlegscheiben und 4 Muttern befestigt.</p>
+        <p>Die Taster werden durch die Oberseite des Gehäuses gesteckt und mit einer Mutter gekontert.</p>
+        <p>Die Taster werden mit den 2 Poligen Schraubklemmen verbunden. Der Temperaturtaster bekommt die obersten zwei Anschlüsse. Anschluss 3 und 4 ist für den mittleren Helligkeitstaster vorgesehen. Die untersten zwei Anschlüsse sind mit dem Farbtaster zu verbinden.</p>
+        <p>Auch die LED-Matrix muss noch mit der Platine verbunden werden. Dafür nehmen wir die Leitung, welche mit GND der LED-Matrix verbunden ist und montieren diese mit dem obersten Anschluss auf der Platine. Der mittlere Anschluss ist mit DIN zu verbinden. Übrig bleibt der unterste Anschluss. Dieser wird mit +5V verbunden. Der ESP wird auf die Platine montiert und an das USB-C Kabel angesteckt, welches durch die Führung am unteren Ende der Wordclock gelegt wird.</p>
+        <p style="color: red; font-style: italic;">Achtung: Der ESP32 muss so aufgesteckt werden, dass USB-C Anschluss nach unten zeigt.</p>
+        <p>Nun wird das Transparentpapier zugeschnitten und mit einem Klebeband auf die MDF-Platte geklebt. Es sollten alle Buchstaben überdeckt sein. </p>
+        <p>Im Anschluss setzen wir die Bodenplatte, die MDF-Platte und die Acrylplatte auf das Gehäuse auf und schrauben die Konstruktion mithilfe der langen M4 Schrauben, sowie Muttern und Unterlegscheiben fest.</p>
+        
+    
+        <div id="navigation">
+            <a href="programming.html">
+                <div id="navigation_left" class="nav_prev"><< Programmierung</div>
+            </a>
+            <a href="manual.html">
+                <div id="navigation_right" class="nav_next">Bedienung des MultiMonG >></div>
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+    <footer class="inner">
+
+        <p class="copyright">LED-Gadget maintained by <a href="https://github.com/spe-khe">spe-khe</a></p>
+
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+    </footer>
+</div>
+</body>
+</html>
