@@ -63,72 +63,98 @@
         <p align="center">
         <img src="assets/images/assembly/Frontplatte_Visicut.png" width ="500" alt="Frontplatte Visicut">
         </p>
-        <p> wird einmal aus einer 3mm MDF-Platte ausgeschnitten und zusätzlich aus einer Gravierplastik Platte. Die restlichen Teile werden mit 5mm Sperrholz ausgeschnitten. In VisiCut muss das richtige Material als auch die richtige Materialstärke ausgewählt werden, 
-            um ein gutes Schnittbild zu garantieren. Alle Dateien außer die Seitenteile und 
-            die Zwischenplatte werden ausschließlich geschnitten und können somit im Modus „alles Cut“ 
-            unter dem Reiter „Mapping“ geschnitten werden.</p>
+        <p> wird einmal aus einer 3mm MDF-Platte ausgeschnitten und zusätzlich aus einer Gravierplastik Platte.</p>
+        <p>Die restlichen Teile werden mit 5mm Sperrholz ausgeschnitten. In VisiCut muss das richtige Material als auch die richtige Materialstärke ausgewählt werden, 
+            um ein gutes Schnittbild zu garantieren.</p>
+        <p>Die Dateien „Bodenplatte“ & „Frontplatte“ werden ausschließlich geschnitten und können somit im Modus „alles cut“ unter dem Reiter „Mapping“ geschnitten werden.</p>
         <p align="center">
         <img src="assets/images/assembly/only_cut (4).png" width ="250" alt="nur cut">
         </p>
-        <p>Das zweite Seitenteil und die Zwischenplatte werden im Modus
-            „Nach einzelner Eigenschaft“ – „unterschieden nach Strichfarbe“ geschnitten. 
-            Bei „Rot“ muss das Profil „Cut“ und bei „Alles andere“, „engrave“ angewählt werden.</p>
+        <p>Die Seitenteile & Zwischenplatte werden im Modus „Nach einzelner Eigenschaft“ – „unterscheide nach Strichfarbe“ geschnitten. Bei „Rot“ muss das Profil „cut“ und bei „Alles andere“, „engrave“ ausgewählt werden. </p>
         <p align="center">
         <img src="assets/images/assembly/Cut_Engrave (3).png" width="250" alt="cut and engrave">
         </p>
-        <p>Die Zwischenplatte wird nun mit der Nut in die Schlitze der zwei Seitenteile gesteckt. 
-            Es muss darauf geachtet werden, dass die Aussparung für das USB-C Kabel unten liegt. 
-            Nun können alle 8 Verbindungsdreiecke mit etwas Kraft auf die Enden der Seitenteile aufgesteckt werden. 
-            Im letzten Schritt werden die Seitenteile für Ober- und Unterseite des Gehäuses auf die Verbindungsdreiecke aufgesteckt. 
-            Es ist darauf zu achten, dass das Seitenteil mit den 3 Löchern das Oberteil ist.</p>
-
+        <p>Nachdem alle Teile ausgeschnitten sind, können die Seitenteile nun mit der Zwischenplatte zusammengebaut werden, indem diese mit der Nut in die Schlitze der 2 Seitenteile gesteckt wird.</p>
+        <p>Achte darauf, dass die Aussparung für das USB-C Kabel unten liegt!</p>
+        <p>Nun können alle 8 Verbindungsdreiecke mit etwas Kraft auf die Enden der Seitenteile aufgesteckt werden. </p>
+        <p>Im letzten Schritt werden die Seitenteile für die Ober- und Unterseite des Gehäuses 
+            auf die Verbindungsdreiecke aufgesteckt. Wichtig: das Seitenteil mit den 3 Löchern 
+            und den Gravierungen ist das Oberteil! Wenn man von vorne auf die Platte schaut, 
+            sollten die 3 Löcher rechts sein. </p>
+        <p align="center">
+        <img src="assets/images/assembly/Taster_Oeffnung.png" width="400" alt="Taster Oeffnung">    
+        </p>
         <h2 id="Platine">Platine</h2>
-        <p>Der Arduino muss nun korrekt verdrahtet werden. Dabei ist zu beachten, dass nicht direkt an die PINs 
-            des Arduino gelötet werden darf. Es werden daher, wie im folgenden Bild zu sehen, Steckverbinder verwendet. 
-            Diese können mit einem Seitenschneider auf die richtige Länge gekürzt werden.</p>
+        <h3>Hinweise zum Löten</h3>
+        <ul>
+            <li>Am besten wird vom kleinsten Bauteil zum größten Bauteil gelötet, damit kleinere Bauteile auch fest verlötet werden</li>
+            <li>Temperatur des Lötkolbens 380°C-400°C</li>
+            <li>Pins der Bauteile nach dem Aufstecken kürzen</li>
+            <li>Auf der Platine ist jeweils an der entsprechenden Stelle der Umriss des Bauteils aufgedruckt</li>
+        </ul>
+        <p>Der Arduino muss nun korrekt verdrahtet werden. Wichtig ist: 
+            der Arduino selbst wird nicht auf die Platine gelötet. 
+            Dafür sind die Steckverbinder da, die man mit einem Seitenschneider 
+            auf die richtige Länge kürzt und dann auf die Platine lötet. 
+            (Der Arduino wird im Endeffekt auf die Steckverbinder gesetzt.)</p>
 
         <img src="assets/images/assembly/Stiftleiste_ESP.PNG" alt="Stiftleiste zuschneiden">
         
-        <p>Der Arduino und die restlichen Bauteile werden auf die Platine gelötet. Hierfür kann sich an folgendem Bild orientiert werden. 
+        <p>Danach werden die restlichen Bauteile auf die Platine gelötet (von klein nach groß). 
+            Hierfür kann sich an folgenden Bildern orientiert werden. 
             Wichtig ist, die Bauteile an die korrekte Position zu löten.</p>
 
         <img src="assets/images/assembly/Platine_front.jpg" alt="Platine Vorderseite">
 
         <img src="assets/images/assembly/Platine_back.jpg" alt="Platine Rückseite">
         
-        <p style="color: black; font-style: italic;">Tipp: Die Bauteile sollten nacheinander einzeln verlötet werden. Die Pins der Bauteile sollten 
-            nach dem Aufstecken auf die Platine gekürzt werden.</p>
-        <p>Als erstes sollten die Steckverbinder des ESP32 verlötet werden. Pro Steckverbinder gibt es 15 Lötstellen.</p>
-        <p>Der Kondensator (zylindrisches Bauteil) wird links des ESP32 platziert. Hierbei muss unbedingt darauf geachtet werden, dass der „Minus Pin“ am Kondensator (der kürzere Pin am Bauteil) mit dem GND PIN der Platine verbunden ist (Ground Pins der Platine erkennt man an der „X Form“ des Durchgangslochs auf der Rückseite der Platine).</p>
-        <p>Die Widerstände können einfach, wie im Bild zu sehen verlötet werden. Hierbei muss jedoch der 470 Ohm Widerstand ganz außen sitzen. Der 1kOhm Widerstand wird rechts daneben aufgesteckt und verlötet.</p>
+        <p>Zuerst werden die Steckverbinder auf die korrekte Länge gekürzt und auf die Platine aufgesteckt und verlötet</p>
+        <p>Der Kondensator (zylindrisches Bauteil) wird links neben den Steckverbindern platziert. 
+            Hierbei muss unbedingt darauf geachtet werden, dass der „Minus Pin“ am Kondensator 
+            (der kürzere Pin am Bauteil) mit dem GND PIN der Platine verbunden ist 
+            (Ground Pins der Platine erkennt man an der „X Form“ des Durchgangsloch 
+            auf der Rückseite der Platine). </p>
+        <p>Die Widerstände können einfach, wie im Bild zu sehen, verlötet werden. Hierbei muss jedoch der 470 Ohm Widerstand ganz außen sitzen. </p>
+        <p>Der 1kOhm Widerstand wird daneben aufgesteckt und verlötet.</p>
         <p>Der DHT11 Sensor (Bauteil mit „blauem Kasten“) wird auf der oberen Seite angebracht. Der DHT 11 Sensor muss „von der Platine weg zeigen“ und kann dann verlötet werden. </p>
-        <p>Der Fotowiderstand (Helligkeitssensor) wird direkt daneben gelötet, die Polung spielt keine Rolle. Wichtig ist, dass der Sensor ebenfalls „nach oben zeigt“. </p>
-        <p>Als letztes müssen die 3 zweipoligen Schraubklemmen können durch aufeinander schieben verbunden werden. Sie werden wie im Bild zu sehen auf der rechten Seite verlötet. Die dreipolige Schraubklemme wird entsprechend auf der linken Seite verlötet. Die Anschlüsse für die Leitungen müssen bei allen Schraubklemmen nach außen zeigen. </p>
+        <p>Der Fotowiderstand (Helligkeitssensor) wird direkt rechts daneben gelötet. Hier spielt die Polung keine Rolle. Wichtig ist nur, dass der Sensor „nach oben“ zeigt. </p>
+        <p>Als letztes müssen die 3 zweipoligen Schraubklemmen können durch aufeinander schieben verbunden werden. Sie werden wie im Bild zu sehen auf der rechten Seite verlötet. Die dreipolige Schraubklemme wird entsprechend auf der linken Seite verlötet.</p>
+        <p>Achte darauf, dass die Anschlüsse für die Leitungen bei allen Schraubklemmen nach außen zeigen.</p> 
         <p style="color: black; font-style: italic;">Achtung: Es ist wichtig, dass alle Bauteile auf der richtigen Seite der Platine verlötet werden. Auf der Platine ist jeweils an der entsprechenden Stelle der Umriss des Bauteils aufgedruckt.</p>
         
         
         <h2 id="LED-Matrix">LED-Matrix</h2>
                 
-        <p>Zunächst müssen die LED-Streifen auf die Zwischenplatte geklebt werden. Auf dieser sind bereits Markierungen mit dem Lasercutter eingraviert, um dies zu erleichtern. Dabei muss man auf die Pfeilrichtung auf den Streifen achten, sodass die Pfeile in Richtung des Stromverlaufs zeigen. Die Pfeile der obersten Reihe müssen von links nach rechts verlaufen. Die Pfeile der zweiten Reihe müssen dementsprechend von rechts nach links zeigen. Die Richtung der Pfeile wechselt sich also in jeder Reihe ab.</p>
+        <p>Zunächst müssen die LED-Streifen auf die Zwischenplatte</p>
+        <p align="center">
+        <img src="assets/images/assembly/Zwischenplatte.png" width="400" alt="Zwischenplatte">    
+        </p>
+        <p>geklebt werden. Auf dieser sind bereits Markierungen mit dem Lasercutter eingraviert, um dies zu erleichtern.</p> 
+        <p>Dabei muss man auf die Pfeilrichtung auf den Streifen achten, sodass die Pfeile in Richtung des Stromverlaufs zeigen.</p> 
+        <p>Die Pfeile der obersten Reihe müssen von links nach rechts verlaufen. Die Pfeile der zweiten Reihe müssen dementsprechend von rechts nach links zeigen. Die Richtung der Pfeile wechselt sich also in jeder Reihe ab.</p> 
         <img src="assets/images/assembly/Matrix.jpg" alt="Matrix">
-        <p>Zuerst müssen die Kontakte der LEDs verzinnt werden. Wenn alle Kontakte vorbereitet sind, müssen die Leitungen vorbereitet werden. </p>
+        <p>Um die LEDs zu verbinden, müssen zunächst die Kontakte verzinnt werden. Wenn alle Kontakte vorbereitet sind, müssen die Leitungen vorbereitet werden. </p>
                 
-        <p style="color: black; font-style: italic;">TIPP: Legen Sie die ersten Leitungen erstmal in schönen Bögen an die Kontakte. Wenn eine passende Länge gefunden wurde, können die Leitungen für die restlichen LEDs vorgerichtet werden. Wenn die jeweiligen Leitungen für den „inneren“, „mittleren“ und „äußeren“ Bogen gleich lang sind, sieht es besser aus und spart Zeit. </p>
-        <p>Im nächsten Schritt müssen die Leitungen auf ca. 3-4mm abisoliert und ebenfalls verzinnt werden, dadurch wird das Anlöten an den Kontakten erleichtert. Anschließend können die Kontakte verlötet werden. Dabei sollte darauf geachtet werden, dass die Kontakte an den Schnittstellen passend zu der nächsten Schnittstelle gelötet werden (+5V auf +5V; DO auf DiN; GND auf GND). Hierbei kann sich an folgendem Bild orientiert werden. </p>
-                
-        <img src="assets/images/assembly/Matrix_solder.jpg" alt="Matrix Lötstellen">
+        <p style="color: black; font-style: italic;">TIPP: Lege die Leitungen erstmal in schönen Bogen an die Kontakte, um auszumessen. Wenn eine passende Länge gefunden wurde, können die Leitungen für die restlichen LEDs vorgerichtet werden. Wenn die jeweiligen Leitungen für den „inneren“, „mittleren“ und „äußeren“ Bogen gleichlang sind, sieht es besser aus und spart Zeit.  </p>
+        <p>Im nächsten Schritt müssen die Leitungen auf ca. 3-4mm abisoliert und ebenfalls verzinnt werden. Dadurch wird das Anlöten an den Kontakten erleichtert. </p>
+
+        <img src="assets/images/assembly/button_isolation.JPEG" alt="Taster abisolieren">
+
+        <p>Anschließend können die Kontakte verlötet werden. ACHTUNG: Die Kontakte an den Schnittstellen müssen passend an die nächste Schnittstelle gelötet werden (+5V auf +5V; DO auf DiN; GND auf GND).</p>
+        <p>Hierbei kann sich an folgendem Bild orientiert werden:</p>
         
+        <img src="assets/images/assembly/Matrix_solder.jpg" alt="Matrix Lötstellen">
+
+        <p>Sobald alle LEDs gelötet sind, müssen noch 3 Leitungen an den Anfang der LED-Streifen gelötet werden und durch das Loch in der Zwischenplatte geführt werden. </p>
+        <p>Das Ende dieser Leitungen wird ebenso abisoliert, mit Aderenthülsen versehen und mit der Crimp Zange angepresst. Diese werden am Ende mit der Platine verbunden.</p>
         <p>Wenn die LEDs gelötet sind, müssen noch 3 Leitungen an den Anfang der LED-Streifen gelötet werden und durch das Loch in der Zwischenplatte geführt werden. Das Ende dieser Leitungen wird abisoliert und mit Aderenthülsen versehen.</p>
 
         <img src="assets/images/assembly/Last_Step_Matrix.jpg" alt="Letzter Schritt der Matrix">
         
         <h2 id="Taster">Taster</h2>
 
-        <p>Um die Taster mit der Platine zu verbinden, benötigen wir zwei Leitungen pro Taster, die auf eine passende Länge zugeschnitten werden. Danach kann jeweils eine Seite der Leitung auf 3-4mm abisoliert werden. </p>
-
-        <img src="assets/images/assembly/button_isolation.JPEG" alt="Taster abisolieren">
-        
-        <p>Die Pins der Taster und die Enden der Leitungen werden nun mithilfe eines Lötkolbens verzinnt. Dann können die Pins auch schon mit den Enden der Leitungen verbunden werden.</p>
+        <p>Um die Taster mit der Platine zu verbinden, benötigen wir 2 Leitungen pro Taster, die auf eine passende Länge zugeschnitten werden. Danach kann bei beiden Seiten auf 3-4mm abisoliert werden. </p>
+        <p>Die Pins der Taster und die Enden der Leitungen werden nun mithilfe eines Lötkolbens verzinnt Anschließend können die Pins auch schon mit den Enden der Leitungen verbunden werden. </p>
 
         <img src="assets/images/assembly/button_solder.JPEG" alt="Taster löten">
         
