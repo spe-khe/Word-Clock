@@ -22,7 +22,27 @@
         <iframe src="table_of_contents.html"
                 onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
         <h1>Bedienung der Word-Clock</h1>
-        <p>Sobald die Wordclock an eine Stromquelle (Laptop oder 15w Netzteil) angeschlossen wird, laufen die LEDs reihe für reihe durch. Sobald der Arduino mit dem Netzwerk verbunden ist, leuchtet eine einzelne LED auf und kurz danach wird auch schon die Uhrzeit angezeigt. Drückt man den Taster für die Farbänderung, wechselt die Farbe der LEDs direkt zur nächsten Farbe. Wird der Taster für die Temperatur gedrückt, zeigt es zuerst die Temperatur und Luftfeuchtigkeit des Sensors, also die aktuelle Raumtemperatur, und danach die Temperatur und die Luftfeuchtigkeit des ausgewählten Ortes an. Wenn der Taster für die Helligkeit gedrückt wird, ändert sich die Helligkeit der LEDs.</p>
+        <p>Sobald die Wordclock an eine Stromquelle (Laptop oder 15w Netzteil) angeschlossen wird, startet die Wordclock ein Netzwerk namens "SPE-Wordclock".Verbindet man sich mit dem Netzwerk, so wird man automatisch auf eine Website geleitet.</p>
+        <!-- Bild einfügen-->
+        <p>Hier kann der Netzwerkname und das Netzwerkpasswort eingetragen werden, mit dem sich die Uhr verbinden soll. Zusätzlich kann der API Key von OpenWeatherMap und die Postleitzahl des Standorts eingetragen werden. Diese wird benötigt, um die passende Temperatur und Luftfeuchtigkeit abzurufen</p>
+        <h2>Offline Mode</h2>
+        <p>Solange die Wordclock nicht verbunden ist befindet sie sich im "Offline Mode". Hier kann die Uhrzeit per Hand eingestellt werden. Dazu hält man den "Temperaturtaster" gedrückt, bis die Anzeige blinkt. Mit Dem "Farb- und Helligkeitstaster" können nun die Stunden und Minuten angepasst werden. Wenn die Uhrzeit richtig eingestellt ist kann mit erneuten Drücken des "Temperaturtasters" die Uhrzeit gespeichert werden.</p>
+        <h2>Online Mode</h2>
+        <p>Ist die Uhr mit dem Netzwerk verbunden befindet sie sich im "Online Mode" (Der Buchstabe "o" leuchtet in der unteren rechten Ecke). Die Uhrzeit ist automatisch richtig eingestellt.</p>
+        <h2>Temperaturtaster</h2>
+        <p>Mit dem "Temperaturtaster" kann man sich durch die verschiedenen Temperaturen und Luftfeuchtigkeiten wählen.</p>
+        <ul>
+            <li>1. Temperatur innen (Display zeigt "in" für innen)</li>
+            <li>2. Luftfeuchtigkeit innen (Display zeigt "in" für innen)</li>
+            <li>3. Temperatur außen</li>
+            <li>4. Luftfeuchtigkeit außen</li>
+        </ul>
+        <p>bei negativen Temperaturen zeigt das Display "ne" an</p>
+        <h2>Helligkeitstaster</h2>
+        <p>Mit dem Helligkeitstaster lässt sich die Helligkeit des Displays manuell einstellen. Dafür drückt man den Taster so oft, bis die richtige Helligkeit erreicht ist. Hält man den Taster gedrückt, so schaltet die Uhr in den "Helligkeitsautomatik Modus" (Buchstabe "Z" in der unteren linken Ecke leuchtet). Hier wird die Helligkeit entsprechend der äußeren Helligkeit, die durch den Helligkeitswiderstand gemessen wird, angepasst.</p>
+        <h2>Farbtaster</h2>
+        <p>Mit dem Farbtaster lässt sich die Farbe des Displays einstellen. Durch einmal drücken oder gedrückt halten können die Farben durchgewechselt werden.</p>
+        
     
         <div id="navigation">
             <a href="finish.html">
