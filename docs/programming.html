@@ -27,23 +27,12 @@
           Für die Programmierung des Gadgets wird die "Arduino IDE" benötigt. Diese kann
           <a href="https://www.arduino.cc/en/software">hier</a> heruntergeladen werden und muss anschließend
           installiert werden. 
-          Nun wird der Boardverwalter geöffnet (Werkzeuge>Board>Boardverwalter) und dort das Paket "esp32"
-          installiert.
       </p>
-      <p>
-          Das Programm kann hier heruntergeladen werden:
+      <p> Das Programm kann hier heruntergeladen werden:
           <br>
           <a href="WordOclock_Programm.ino" download>Wordclock_Programm</a>
       </p>
-      <h2>Anpassung des WLAN</h2>
-      <p>
-          Da für den Code WLAN benötigt wird, müssen in den folgenden zwei Zeilen noch der passende WLAN-Router mit zugehörigem Passwort eingestellt werden. Zu Testzwecken kann auch der Hotspot vom Handy verwendet werden.
-      </p>
-      <p>
-          In der oberen Zeile muss für „WLAN-Name hier eingeben“ der Name des WLAN-Netzwerkes eingegeben werden. In der zweiten Zeile muss für “WLAN-Passwort hier eingeben“ das passende WLAN-Passwort eingetragen werden. Im Code findet man dies in den Zeilen 12 und 13.
-      </p>
-
-        <img src="assets/images/programming/update_Wifi.PNG" alt="Update Wifi">
+      <p>Zunächst muss die ZIP File entpackt werden. Am Besten man entpackt den Ordner auf dem Desktop. Danach kann die ".ino" Datei aus dem Ordner mit Doppelklick gestartet werden. Wenn sich die Arduino IDE geöffnet hat wird abgefragt, ob ein Ordner für diese ".ino" File angelegt werden soll. Dies kann bestätigt werden. In diesen neuen Ordner müssen nun noch die restlichen Dateien aus der entpackten ZIP File abgelegt werden. Es handelt sich dabei um ".h" und ".cpp" Dateien, die benötigt werden, damit unser Code auch funktioniert.</p>
 
       <h2>Anpassung des Ortes für die Außentemperatur</h2>
       <p>
@@ -61,22 +50,17 @@
           Hier muss nun ein Account erstellt werden. 
       </p>
       <p>
-         Nach dem Einloggen kann über den Username, der nun anstelle von Login in der oberen Zeile steht, „My API keys“ ausgewählt werden.
-      </p>
-      <p>Der API key muss nun in den Zeilen 22-24 im Code zwischen die “ “ eingefügt werden. </p>
+         Nach dem Einloggen kann über den Username, der nun anstelle von Login in der oberen Zeile steht, „My API keys“ ausgewählt werden. Den API Key sollte aufgeschrieben werden, da er später beim Konfigurieren der Wordclock benötigt wird. </p>
 
-        <img src="assets/images/programming/update_Information.png" alt="Update Informationen">
-        
-      <p>Unter „string city“ lässt sich die Stadt ändern, für die die Temperatur und Luftfeuchtigkeit angezeigt werden soll. Dafür muss einfach „Karlsruhe“ für die gewünschte Stadt ersetzt werden. Sollte eine Stadt außerhalb von Deutschland gewählt werden, muss in der Zeile darunter für „DE“ das passende Land in Kurzschreibweise ersetzt werden.</p>
-       
       <h2>Libraries</h2>
       <p>Nun müssen noch einige Libraries installiert werden. Dafür muss in der linken Seitenleiste das Büchersymbol ausgewählt werden. Es sollte sich nun der Library Manager öffnen. Insgesamt müssen fünf Libraries installiert werden. Achten Sie darauf, dass Sie die Version laden, welche auf den Bildern zu erkennen ist</p>
         
-        <img src="assets/images/programming/Lib_one.png" alt="Bibliothek 1">
-        <img src="assets/images/programming/Lib_two.png" alt="Bibliothek 2">
-        <img src="assets/images/programming/Lib_three.png" alt="Bibliothek 3">
-        <img src="assets/images/programming/Lib_four.PNG" alt="Bibliothek 4">
-        <img src="assets/images/programming/Lib_five.PNG" alt="Bibliothek 5">
+        <p align="center">
+        <img src="assets/images/programming/Libraries_1.png" width ="600" alt="Libraries Bild 1">
+        </p>
+        <p align="center">
+        <img src="assets/images/programming/Libraries_2.png" width ="600" alt="Libraries Bild 2">
+        </p>
         
       <h2>Code hochladen</h2>
         <p>Ist dies erledigt muss nun der Code auf den Arduino hochgeladen werden. Hierfür muss zunächst die korrekte ESp32 Core installiert werden. Über Werkzeuge > Board > Boardverwalter kann nun in der Suchleiste „esp32“ eingetragen werden. Bei „esp32 by Espressif Systemsder“ muss die Version 2.0.14 ausgewählt und installiert werden.</p>
@@ -87,8 +71,7 @@
 
         <img src="assets/images/programming/select_board.png" alt="Boardauswahl">
         
-      <p>Wie in dem Bild zu sehen ist, muss in der Suchleiste nach „Arduino Nano ESP32“ gesucht werden. Hierbei ist es wichtig darauf zu achten, dass das Board „Arduino Nano ESP32-esp32“ ausgewählt wird. Unter Ports wird einfach der angezeigte Port ausgewählt.</p>
-      <p>Nun kann der Code über den Pfeil auf türkisem Hintergrund hochgeladen werden. </p>
+      <p>Wie in dem Bild zu sehen ist, muss in der Suchleiste nach „Arduino Nano ESP32“ gesucht werden. Hierbei ist es wichtig darauf zu achten, dass das Board „Arduino Nano ESP32-esp32“ ausgewählt wird. Unter Ports wird einfach der angezeigte Port ausgewählt. Nun kann der Code über den Pfeil auf türkisem Hintergrund hochgeladen werden. Das kann eine Weile dauern, da die ArduinoIDE den Code zunächst auf Fehler untersucht und dann in eine für den ESP verständliche Sprache übersetzt. Diesen Vorgang nennt man "Kompilierung".</p>
       
 
         <div id="navigation">
